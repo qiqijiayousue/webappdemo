@@ -1,13 +1,7 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+         import="java.util.*"%>
 <%@ page import="com.alibaba.appengine.jae.api.officialservice.OfficialServiceFactory" %>
 <%@ page import="com.alibaba.appengine.jae.api.officialservice.OfficialService" %>
-<%--
-  Created by IntelliJ IDEA.
-  User: miaoxi.zj
-  Date: 14-3-3
-  Time: 下午3:30
-  To change this template use File | Settings | File Templates.
---%>
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
     <title>JAEdemo</title>
@@ -89,27 +83,6 @@
                 </a>
             </div>
         </div>
-        <div class="testcookie">
-            <h5>获取的cookie如下</h5>
-            <div>
-                <%
-                    Cookie[] cookies = request.getCookies();
-                    //遍历cookie数组
-                    if(cookies==null){
-                        System.out.println("没有cookie信息");
-                    }else{
-                        for(int i=0;i<cookies.length;i++){
-                            Cookie cookie = cookies[i];
-                            //获得cookie的名称和值
-                            String name=cookie.getName();
-                            String value = cookie.getValue();
-                            System.out.println("cookie名："+name+" &nbsp; cookie值："+value+"</br>");
-
-                        }
-                    }
-                %>
-            </div>
-    </div>
 
 </div>
 

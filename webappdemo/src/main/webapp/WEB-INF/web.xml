@@ -5,15 +5,15 @@
 
     <!--配置OAuth的servlet映射关系-->
     <welcome-file-list>
-        <welcome-file>/views/oauth/index.html</welcome-file>
+        <welcome-file>/views/tradedataopen/tradedataindex.jsp</welcome-file>
     </welcome-file-list>
     <servlet>
-        <servlet-name>oauthservlet</servlet-name>
-        <servlet-class>servlets.OAuthServlet</servlet-class>
+        <servlet-name>tradeData</servlet-name>
+        <servlet-class>servlets.TradeData</servlet-class>
     </servlet>
     <servlet-mapping>
-        <servlet-name>oauthservlet</servlet-name>
-        <url-pattern>/views/oauth/*</url-pattern>
+        <servlet-name>tradeData</servlet-name>
+        <url-pattern>/views/tradedataopen/*</url-pattern>
     </servlet-mapping>
 
 </web-app>
