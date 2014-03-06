@@ -16,4 +16,7 @@
         <url-pattern>/views/tradedataopen/*</url-pattern>
     </servlet-mapping>
 
+
+
+
 </web-app>

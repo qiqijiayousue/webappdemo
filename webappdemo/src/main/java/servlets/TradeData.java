@@ -16,11 +16,12 @@ public class TradeData extends HttpServlet {
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
+        doGet(request,response);
     }
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
-
-
+        response.setContentType("text/html;charset=utf-8");
+        request.getRequestDispatcher("/views/tradedataopen/tradedataindexjsp").forward(request,response);
     }
 }
 

@@ -1,24 +1,30 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"%>
+<%--
+  Created by IntelliJ IDEA.
+  User: miaoxi.zj
+  Date: 14-3-5
+  Time: 下午3:45
+  To change this template use File | Settings | File Templates.
+--%>
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ page import="com.alibaba.appengine.jae.api.officialservice.OfficialServiceFactory" %>
 <%@ page import="com.alibaba.appengine.jae.api.officialservice.OfficialService" %>
 <html>
 <head>
-    <title>JAEdemoappkey684894</title>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>JAEdemoappkey682947</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <link rel="stylesheet" href="/assets/custom/reset.css">
     <link rel="stylesheet" href="/assets/custom/trade.css">
 </head>
 <body>
-
 <%
     String[] urls = new String[6];
     Object[] args;
     OfficialService officialService;
-    String[] itemIds = new String[]{"1500016303831","1500011388131","1500012546582","1607009789","1607018099","1607018323"};
-    for(int i=0;i<itemIds.length;i++){
-        args = new Object[]{itemIds[i],684894,2062118596};
+    String[] itemIds = new String[]{"1500016303831", "1500011388131", "1500012546582", "1607009789", "1607018099", "1607018323"};
+    for (int i = 0; i < itemIds.length; i++) {
+        args = new Object[]{itemIds[i], 682947, 2062118596};
         officialService = OfficialServiceFactory.getOfficialService();
-        urls[i]=(String)officialService.invoke("JaeClickUrlService", "getItemClickUrl",args);
+        urls[i] = (String) officialService.invoke("JaeClickUrlService", "getItemClickUrl", args);
     }
 
 %>
@@ -31,6 +37,7 @@
         <div class="taobaolist">
             <%--miaxi03中的宝贝--%>
             <h4>淘宝宝贝list</h4>
+
             <div class="baby">
                 <a href="<%=urls[0]%>" target="_blank">
                     <img src="/assets/imgs/tbbaby1.JPG">
@@ -56,9 +63,10 @@
 
             </div>
         </div>
-         <div class="tmalllist">
-             <%--xuantest1中的宝贝--%>
+        <div class="tmalllist">
+            <%--xuantest1中的宝贝--%>
             <h4>天猫宝贝list</h4>
+
             <div class="baby">
                 <a href="<%=urls[3]%>" target="_blank">
                     <img src="/assets/imgs/tmbaby1.JPG"><br>
@@ -82,5 +90,6 @@
         </div>
     </div>
 </div>
+
 </body>
 </html>
